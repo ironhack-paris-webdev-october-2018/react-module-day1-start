@@ -1,21 +1,13 @@
 import React, { Component } from "react";
 
 import "./App.css";
+import User from "./User.js";
 
 const user = {
   firstName: "Pablo",
   lastName: "Perez",
+  avatarUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/InddelVal-Boca_%289%29.jpg/220px-InddelVal-Boca_%289%29.jpg"
 };
-
-function displayAvatar() {
-  if (user.avatarUrl) {
-    {/* no quotes when using variables for HTML attributes */}
-    return <img src={user.avatarUrl} />;
-  }
-  else {
-    return <img src="https://s3.amazonaws.com/owler-image/logo/ironhack_owler_20180828_221413_original.png" />
-  }
-}
 
 
 // a component is a CLASS that extends from React's Component class
@@ -38,8 +30,11 @@ class App extends Component {
         </h2>
         <p>This is App component.</p>
 
-        <p>Welcome, {user.firstName} {user.lastName}.</p>
-        {displayAvatar()}
+        {/* like HTML tags, components can be displayed many times
+            (you can send a component "props" to customize the way it displays)
+        */}
+        <User userName={user.firstName} avatar={user.avatarUrl} />
+        <User userName="Vincent" isVerified />
       </div>
     );
   }

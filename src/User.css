@@ -1,0 +1,14 @@
+.User {
+  border: 2px solid white;
+  color: white;
+  padding: 10px 30px;
+}
+
+.User.verified {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.User.verified img {
+  border-radius: 10px;
+}
