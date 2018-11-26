@@ -3,7 +3,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import App from "./App.js";
+
+
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <section>
+    <h1>Hello, world!</h1>
+    <p>This is the index.js file.</p>
+
+    {/* Display the App component in the section */}
+    <App />
+  </section>,
   document.getElementById("root")
 );
